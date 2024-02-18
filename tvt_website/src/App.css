@@ -1,11 +1,18 @@
-*{margin:0px;padding: 0px;box-sizing: border-box;}
+
+/* In your CSS file */
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./assets/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+    /* Add other font properties if needed */
+  }
+
+*{margin:0px;padding: 0px;box-sizing: border-box; font-family: 'Quicksand', sans-serif;}
 
 .container-fluid{padding: 0px 35px;}
 .cursor{cursor: pointer;}
 
-/* COLOR PALLETE */
+.bg-color{background: #201658;}
 
-.bg-color-dark{background: #201658;}
-.bg-color-med{background: #1D24CA;}
-.bg-color-light{background: #98ABEE;}
-.color-light{background: #F9E8C9;}
+.icon-color{color:gray;}
+
+
