@@ -1,3 +1,11 @@
 *{margin:0px;padding: 0px;box-sizing: border-box;}
 
 .container-fluid{padding: 0px 35px;}
+.cursor{cursor: pointer;}
+
+/* COLOR PALLETE */
+
+.bg-color-dark{background: #201658;}
+.bg-color-med{background: #1D24CA;}
+.bg-color-light{background: #98ABEE;}
+.color-light{background: #F9E8C9;}
