@@ -60,7 +60,23 @@ const Header = () =>{
                                             <Button><span className='icon'><PermPhoneMsgOutlinedIcon/></span><Link>About Us</Link></Button>
                                         </li>
                                         <li className="list-inline-item">
-                                            <Button><span className='icon'><ListIcon/></span><Link>Categories</Link></Button>
+                                            <Button><span className='icon'><ListIcon/></span><Link>Products</Link></Button>
+                                            <div className='dropdown_menu megaMenu'>
+                                               <div className='row'>
+                                                    <div className='col'>
+                                                        <h3>Tshirts</h3>
+                                                    </div>
+                                                    <div className='col'>
+                                                        <h3>Hoodies</h3>
+                                                    </div>
+                                                    <div className='col'>
+                                                        <h3>Trending</h3>
+                                                    </div>
+                                                    <div className='col'>
+                                                        <h3>Trending</h3>
+                                                    </div>
+                                               </div>
+                                            </div>
                                         </li> 
                                         <li className="list-inline-item">
                                             <Button><span className='icon'><PermPhoneMsgOutlinedIcon/></span><Link>Contact</Link></Button>
