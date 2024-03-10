@@ -1,0 +1,15 @@
+.f_logo{max-width: 150px;}
+.left_column{font-weight: 600;margin:0 0 0 40px ;}
+.icon{padding: 4px;}
+footer{padding: 20px;background-color: var(--background-color);}
+footer .social{padding:0 40px;}
+footer .social p{justify-content: center;}
+footer h5{font-weight: 600;font-size: 20px; justify-content: center;color: var(--primary-color);text-align: center;margin-bottom: 8px;}
+footer .footer-logo-wrapper{background-color: #96512b9c;border-radius: 8px;box-shadow: 0 0 8px #4223127e;padding: 10px;}
+footer .slogan,footer img{justify-content: center;}
+footer .footer-logo{border-right: 2px solid var(--light-color);}
+footer span {color: var(--primary-color);}
+footer p{display:flex;align-items: center;margin-bottom: 5px;color: var(--primary-color);font-weight: 500;}
+footer .container-fluid .row .mid_column,footer .container-fluid .row .left_column {border-right: 2px solid var(--light-color);}
+footer .container-fluid .row .mid_column{padding: 0px 20px;}
+footer .container-fluid .row .left_column .footer-logo-wrapper{margin-right: 20px;}

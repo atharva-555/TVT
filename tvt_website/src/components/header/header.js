@@ -14,6 +14,7 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { ClickAwayListener } from '@mui/base/ClickAwayListener';
+import '../../index.css';
 
 
 const Header = () =>{
@@ -57,24 +58,41 @@ const Header = () =>{
                                             <Button><span className='icon'><HomeOutlinedIcon/></span><Link>Home</Link></Button>
                                         </li>
                                         <li className="list-inline-item">
-                                            <Button><span className='icon'><PermPhoneMsgOutlinedIcon/></span><Link>About Us</Link></Button>
+                                            <Button><Link>About Us</Link></Button>
                                         </li>
                                         <li className="list-inline-item">
                                             <Button><span className='icon'><ListIcon/></span><Link>Products</Link></Button>
                                             <div className='dropdown_menu megaMenu'>
                                                <div className='row'>
                                                     <div className='col'>
-                                                        <h3>Tshirts</h3>
+                                                           <h4>Tshirts</h4>
+                                                            <ul>
+                                                                <li><Link to={""}>Sweatshirts</Link></li>
+                                                                <li><Link to={""}>Oversized Tshirts</Link></li>
+                                                                <li><Link to={""}> Cotton Tshirts 230GSM</Link></li>       
+                                                            </ul>
+                                                                                 
+                                                            <h4>Shirts</h4>   
+                                                            <ul>
+                                                                <li><Link to={""}>New Arrival</Link></li>
+                                                                <li><Link to={""}>Formal</Link></li>
+                                                                <li><Link to={""}>Casual</Link></li>       
+                                                        </ul>      
                                                     </div>
                                                     <div className='col'>
-                                                        <h3>Hoodies</h3>
+                                                        <h4>Hoodies</h4>
+                                                        <ul>
+                                                            <li><Link to={""}>Zipper</Link></li>
+                                                            <li><Link to={""}>Designer</Link></li>
+                                                            <li><Link to={""}>Plain</Link></li>       
+                                                        </ul>
                                                     </div>
                                                     <div className='col'>
-                                                        <h3>Trending</h3>
+                                                        <h4>Trending</h4>
                                                     </div>
-                                                    <div className='col'>
-                                                        <h3>Trending</h3>
-                                                    </div>
+                                                    {/* <div className='col'>
+                                                        <h4>Trending</h4>
+                                                    </div> */}
                                                </div>
                                             </div>
                                         </li> 

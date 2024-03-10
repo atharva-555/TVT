@@ -2,6 +2,7 @@
 import './assets/fonts/Quicksand-VariableFont_wght.ttf';
 import './App.css';
 import Header from './components/header/header';
+import Footer from './components/footer/footer';
 import {BrowserRouter , Routes, Route} from 'react-router-dom';
 import Home from './pages/Home/index';
 import About from './pages/About/index';
@@ -17,7 +18,11 @@ function App() {
         <Route exact={true} path='/' element={<Home/>}/>
         <Route exact={true} path='/about' element={<About/>}/>
       </Routes>
+
+      <Footer/>
     </BrowserRouter>
+
+  
   );
 }
 
