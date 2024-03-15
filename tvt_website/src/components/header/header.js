@@ -13,7 +13,6 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 import '../../index.css';
 
 
@@ -99,10 +98,10 @@ const Header = () =>{
                                         <li className="list-inline-item">
                                             <Button><span className='icon'><PermPhoneMsgOutlinedIcon/></span><Link>Contact</Link></Button>
                                         </li>            
-                                        <li className="list-inline-item">
+                                        <li className="list-inline-item" id='profile-hover'>
                                             {/* Conditionally render either "Login" or "My Profile" */}
                                                 {isLoggedIn ? (
-                                                    <Button onClick={handledropdown}><span className='icon'><AccountCircleOutlinedIcon/></span><Link>My Profile</Link></Button>
+                                                    <Button id='myprofile'><span className='icon'><AccountCircleOutlinedIcon/></span><Link>My Profile</Link></Button>
                                                 ) : (
                                                     <Button onClick={handleLogin} id='login-btn'><span className='icon'><VpnKeyOutlinedIcon/></span><Link>Login</Link></Button>
                                                 )}
@@ -118,7 +117,7 @@ const Header = () =>{
                                                     <li><Button className='align-items-center'><span className='icon'><LogoutOutlinedIcon/></span>Sign Out</Button></li>
                                                 </ul>  
                                             {/*  } */} 
-                                            </li>  
+                                        </li>  
                                                             
                                     </ul>
                                 {/* </ClickAwayListener> */}
