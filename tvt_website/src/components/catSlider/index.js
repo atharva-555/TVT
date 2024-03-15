@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import Slider from "react-slick";
 import TshirtImg from "../../assets/images/tshirt.png"
@@ -8,6 +8,28 @@ import HoodieImg from "../../assets/images/hoodie.png"
 import SweatShirtImg from "../../assets/images/sweatshirt.png"
 
 const CatSlider = () => {
+
+    // const [itemBg, setItemBg] = useState([
+    //     '#fffceb',
+    //     '#ecffec',
+    //     '#feefea',
+    //     '#fff3eb',
+    //     '#fff3ff',
+    //     '#f2fce4',
+    //     '#feefea',
+    //     '#fffceb',
+    //     '#feefea',
+    //     '#ecffec',
+    //     '#feefea',
+    //     '#fff3eb',
+    //     '#fff3ff',
+    //     '#f2fce4',
+    //     '#feefea',
+    //     '#fffceb',
+    //     '#feefea',
+    //     '#ecffec'
+    // ]);
+
     var settings = {
         dots: true,
         infinite: true,
@@ -24,6 +46,19 @@ const CatSlider = () => {
         <div className='container-fluid'>
             <h2 className='hd'>Categories </h2>
             <Slider {...settings} className='cat_Slider_Main'>
+                {/* {
+                    itemBg.length!==0 && itemBg.map((item,index)=>{
+                        return(
+                            <div className='item'>
+                                <div className='info' style={{background:item}}>
+                                    <img src={HoodieImg}></img>
+                                    <h5>Hoodies</h5>
+                                    <p>28 items</p>
+                                </div>
+                            </div>
+                        )
+                    })
+                } */}
                 <div className='item' >
                     <div className='info'>
                         <img src={HoodieImg}></img>
@@ -61,7 +96,7 @@ const CatSlider = () => {
                     </div>
                 </div>
 
-                {/* ============================REPEATED================================ */}
+             {/* ============================REPEATED================================ } */}
                 <div className='item' >
                     <div className='info'>
                         <img src={HoodieImg}></img>
