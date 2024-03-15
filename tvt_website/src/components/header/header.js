@@ -104,7 +104,7 @@ const Header = () =>{
                                                 {isLoggedIn ? (
                                                     <Button onClick={handledropdown}><span className='icon'><AccountCircleOutlinedIcon/></span><Link>My Profile</Link></Button>
                                                 ) : (
-                                                    <Button onClick={handleLogin}><span className='icon'><VpnKeyOutlinedIcon/></span><Link>Login</Link></Button>
+                                                    <Button onClick={handleLogin} className='login-btn'><span className=' icon'><VpnKeyOutlinedIcon/></span><Link>Login</Link></Button>
                                                 )}
 
             

@@ -2,4 +2,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
 
 .catSlierSection{width: 100%;height: auto;padding: 30px 0;}
-.cat_Slider_Main{height: 150px;background-color: aquamarine;}
+.cat_Slider_Main{height: 250px;background-color: rgba(0, 0, 0, 0.07);box-shadow: 0px 5px 10px rgba(0, 0, 0, 15%);}
+.slick-arrow{width: 40px;height: 40px;position: absolute;top: 47%;font-size: 30px;}
+.slick-next{right: 20px;}
+.slick-prev{left: 20px;}
+.slick-next:before{font-size: 24px;color: var(--background-color);}
+.slick-prev:before{font-size: 24px;color: var(--background-color);}
+
+.slick-arrow:hover{width: 40px;height: 40px;position: absolute;top: 47%;font-size: 30px;background-color: var(--dark-color);}
+.item{margin: 10px;}
