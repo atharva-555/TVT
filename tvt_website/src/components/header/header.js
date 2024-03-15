@@ -52,7 +52,7 @@ const Header = () =>{
                     <div className='col-sm-6 ml-auto  part2 d-flex align-items-center justify-content-center'>
                         <div className='nav'>
                             <nav>
-                                <ClickAwayListener onClickAway={()=>setIsOpenDropdown(false)}>
+                                {/* <ClickAwayListener onClickAway={()=>setIsOpenDropdown(false)}> */}
                                     <ul className="list list-inline mb-0">
                                         <li className="list-inline-item">
                                             <Button><span className='icon'><HomeOutlinedIcon/></span><Link>Home</Link></Button>
@@ -104,12 +104,12 @@ const Header = () =>{
                                                 {isLoggedIn ? (
                                                     <Button onClick={handledropdown}><span className='icon'><AccountCircleOutlinedIcon/></span><Link>My Profile</Link></Button>
                                                 ) : (
-                                                    <Button onClick={handleLogin} className='login-btn'><span className=' icon'><VpnKeyOutlinedIcon/></span><Link>Login</Link></Button>
+                                                    <Button onClick={handleLogin} id='login-btn'><span className='icon'><VpnKeyOutlinedIcon/></span><Link>Login</Link></Button>
                                                 )}
 
             
-                                            { isOpenDropdown != false &&
-                                                <ul className='dropdownMenu'>
+                                            {/* { isOpenDropdown != false && */}
+                                                <ul className='dropdownMenu profilemenu'>
                                                     <li><Button className='align-items-center'><span className='icon'><AccountCircleOutlinedIcon/></span>My Account</Button></li>
                                                     <li><Button className='align-items-center'><span className='icon'><LocationOnOutlinedIcon/></span>Order Tracking</Button></li>
                                                     <li><Button className='align-items-center'><span className='icon'><FavoriteBorderOutlinedIcon/></span>My Wishlist</Button></li>
@@ -117,11 +117,11 @@ const Header = () =>{
                                                     <li><Button className='align-items-center'><span className='icon'><SettingsOutlinedIcon/></span>Settings</Button></li>
                                                     <li><Button className='align-items-center'><span className='icon'><LogoutOutlinedIcon/></span>Sign Out</Button></li>
                                                 </ul>  
-                                            }  
+                                            {/*  } */} 
                                             </li>  
                                                             
                                     </ul>
-                                </ClickAwayListener>
+                                {/* </ClickAwayListener> */}
                             </nav>
                         </div>
                     </div>

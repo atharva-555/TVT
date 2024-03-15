@@ -1,7 +1,7 @@
-.f_logo{max-width: 150px;}
-.left_column{font-weight: 600;margin:0 0 0 40px ;}
+.f_logo{max-width: 150px;filter: invert(99%)}
+.left_column{font-weight: 600;}
 .icon{padding: 4px;}
-footer{padding: 20px;background-color: var(--background-color);}
+footer{padding: 20px 40px;background-color: var(--background-color);}
 footer .social{padding:0 40px;}
 footer .social p{justify-content: center;}
 footer h5{font-weight: 600;font-size: 20px; justify-content: center;color: var(--primary-color);text-align: center;margin-bottom: 8px;}
