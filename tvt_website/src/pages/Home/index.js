@@ -2,7 +2,6 @@ import React from "react";
 import './style.css';
 import '../../index.css';
 import Product from "../../components/product";
-
 import CatSlider from "../../components/catSlider";
 
 const Home =()=>{
@@ -19,13 +18,36 @@ const Home =()=>{
 
             <section className="homeProducts">
                 <div className="container-fluid">
-                    {/* <div className="d-flex align-items-center">
-                       <h2 className="hd">Popular Products</h2>
-                       <ul className="list list-inline">
-                            <li className="list list-inline-item"></li>
-                       </ul>
-                    </div> */}
+                <h2 className='hd'>Popular Products</h2>
                     <div className="productRow">
+                        <div className="item">
+                            <Product/>
+                        </div>
+                        <div className="item">
+                            <Product/>
+                        </div>
+                        <div className="item">
+                            <Product/>
+                        </div>
+                        <div className="item">
+                            <Product/>
+                        </div>
+                        <div className="item">
+                            <Product/>
+                        </div>
+{/*  */}
+                        <div className="item">
+                            <Product/>
+                        </div>
+                        <div className="item">
+                            <Product/>
+                        </div>
+                        <div className="item">
+                            <Product/>
+                        </div>
+                        <div className="item">
+                            <Product/>
+                        </div>
                         <div className="item">
                             <Product/>
                         </div>

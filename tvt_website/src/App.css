@@ -16,5 +16,11 @@
 .icon-color{color:gray;}
 .hd{font-size:34px;font-weight: 700;margin-bottom: 20px;}
 
+.listingPage{width: 100%;height: auto;padding: 45px 25px;}
+.breadcrumb{width: 100%;height: auto;padding: 45px 45px!important;background:#fa945d3b!important;border-radius: 10px;}
+.breadcrumb h1{font-size: 36px;font-weight: bold;}
+.breadcrumb li{margin-right: 15px!important;}
+.breadcrumb li a{color: rgba(0,0,0,0.65);text-decoration: none;font-size: 16px;font-weight: 600;}
+
 
 

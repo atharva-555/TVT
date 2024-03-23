@@ -101,22 +101,21 @@ const Header = () =>{
                                         <li className="list-inline-item" id='profile-hover'>
                                             {/* Conditionally render either "Login" or "My Profile" */}
                                                 {isLoggedIn ? (
-                                                    <Button id='myprofile'><span className='icon'><AccountCircleOutlinedIcon/></span><Link>My Profile</Link></Button>
+                                                    <>
+                                                        <Button id='myprofile'><span className='icon'><AccountCircleOutlinedIcon/></span><Link>My Profile</Link></Button>
+                                                        <ul className='dropdownMenu profilemenu'>
+                                                            <li><Button className='align-items-center'><span className='icon'><AccountCircleOutlinedIcon/></span>My Account</Button></li>
+                                                            <li><Button className='align-items-center'><span className='icon'><LocationOnOutlinedIcon/></span>Order Tracking</Button></li>
+                                                            <li><Button className='align-items-center'><span className='icon'><FavoriteBorderOutlinedIcon/></span>My Wishlist</Button></li>
+                                                            <li><Button className='align-items-center'><span className='icon'><ShoppingCartOutlinedIcon/></span>My Cart</Button></li>
+                                                            <li><Button className='align-items-center'><span className='icon'><SettingsOutlinedIcon/></span>Settings</Button></li>
+                                                            <li><Button className='align-items-center'><span className='icon'><LogoutOutlinedIcon/></span>Sign Out</Button></li>
+                                                        </ul>  
+                                                    </>               
                                                 ) : (
                                                     <Button onClick={handleLogin} id='login-btn'><span className='icon'><VpnKeyOutlinedIcon/></span><Link>Login</Link></Button>
                                                 )}
-
-            
-                                            {/* { isOpenDropdown != false && */}
-                                                <ul className='dropdownMenu profilemenu'>
-                                                    <li><Button className='align-items-center'><span className='icon'><AccountCircleOutlinedIcon/></span>My Account</Button></li>
-                                                    <li><Button className='align-items-center'><span className='icon'><LocationOnOutlinedIcon/></span>Order Tracking</Button></li>
-                                                    <li><Button className='align-items-center'><span className='icon'><FavoriteBorderOutlinedIcon/></span>My Wishlist</Button></li>
-                                                    <li><Button className='align-items-center'><span className='icon'><ShoppingCartOutlinedIcon/></span>My Cart</Button></li>
-                                                    <li><Button className='align-items-center'><span className='icon'><SettingsOutlinedIcon/></span>Settings</Button></li>
-                                                    <li><Button className='align-items-center'><span className='icon'><LogoutOutlinedIcon/></span>Sign Out</Button></li>
-                                                </ul>  
-                                            {/*  } */} 
+ 
                                         </li>  
                                                             
                                     </ul>

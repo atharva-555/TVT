@@ -1,1 +1,4 @@
-.homeProducts{margin-left: 20px;}
+.homeProducts{margin-left: 10px;padding: 25px 0;}
+.homeProducts .hd{margin-left: 10px;}
+.homeProducts .productRow{display: flex;flex-wrap: wrap;}
+.homeProducts .productRow .item{width: 20%;padding: 15px;}
