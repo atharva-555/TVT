@@ -1,0 +1,41 @@
+.card h3{text-transform: capitalize;color: var(--dark-color);font-size: 22px;font-weight: 600!important;}
+.catList .catItem h4{margin-bottom: 0!important;font-weight: 600!important; font-size: 16px!important;}
+.card{padding: 25px;box-shadow: 0 .3rem 0.5rem rgba(0,0,0,.15)!important;margin-bottom: 30px;}
+.catList .catItem {padding: 10px;border: 1px solid rgba(0,0,0,0);cursor: pointer;font-weight: 600!important;margin:8px 0;border-radius: 4px;transition: all 0.3s ease-in-out;}
+.catList .catItem:hover{border: 1px solid rgba(0,0,0,.16);}
+.rounded-circle{background:#ffab7e82!important;width: 40px;height: 40px;}
+
+.css-187mznn-MuiSlider-root {
+    color: var(--background-color)!important;
+}
+.card .priceRange{font-size: 16px;font-weight: 600;}
+.card .priceRange strong{color: var(--background-color)}
+.fliters{padding: 25px 0px;}
+.fliters ul{max-height: 250px;overflow-y: scroll;margin-left: 10px;}
+.fliters ul::-webkit-scrollbar{width: 10px!important;}
+.fliters ul::-webkit-scrollbar-thumb{background: #ccc!important;}
+.fliters ul li{width: 100%;margin-bottom: 0px;list-style: none;font-weight: 500;}
+.fliters  h5{font-weight: 600;margin-bottom: 10px;}
+
+#filter-btn{ background-color: var(--background-color);color: var(--primary-color);border: 1px solid var(--background-color);outline: none;border-radius: 4px;align-items: center;display: flex;padding: 5px 10px;font-weight: 500;font-size: 16px;}
+#filter-btn:hover{background-color: var(--primary-color);color:var(--background-color); ;}
+
+.primary-color{color: var(--background-color);}
+
+.rightContent .topStrip{padding: 0px 25px !important;}
+.rightContent .topStrip p{font-size: 18px;font-weight: 500;}
+.rightContent .topStrip .btn_ {background: none!important; border: 1px solid rgba(0,0,0,.15)!important;padding: 10px 20px !important;text-transform: capitalize!important;color: rgba(0,0,0,.75)!important;border-radius: 5px;font-size: 15px!important;}
+.rightContent .topStrip .tab_ {width: 250px; display: flex!important;margin: auto!important;justify-content: center;}
+
+.rightContent .topStrip .tab_ svg{opacity: 0.8;margin: 0px 3px!important;}
+
+.rightContent .topStrip .dropdownMenu{opacity: 0;visibility: hidden; position: absolute;width: 250px; top: 120%;height: auto; background: var(--primary-color);box-shadow: 0px 5px 10px rgba(0, 0, 0, 15%);padding: 10px 0px;transition: all 0.1s ease-in-out;z-index: 2;}
+.rightContent .topStrip .dropdownMenu li{width: 100%; list-style: none;}
+.rightContent .topStrip .dropdownMenu Button{text-align: left;width:100%;text-transform: capitalize;font-size: 15px;color: rgb(0, 0,0, 0.8);padding: 10px 15px;font-weight: 400;justify-content: flex-start;}
+.rightContent .topStrip .dropdownMenu Button:hover{background: #f1f1f1;color: var(--background-color);}
+
+.rightContent .topStrip .show-btn:hover  + .dropdownMenu{opacity: 1;top:100% ;visibility: inherit;}
+.rightContent .topStrip .dropdownMenu:hover {opacity: 1;top:100% ;visibility: inherit;}
+.rightContent .topStrip .sort-btn:hover  + .dropdownMenu_1{opacity: 1;top:100%;visibility: inherit;}
+.rightContent .topStrip .dropdownMenu_1:hover {opacity: 1;top:100% ;visibility: inherit;}
+
