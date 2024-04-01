@@ -1,0 +1,11 @@
+.notFound{width: 100%;height: auto;}
+.notFound .box{width: 50%;height: auto;padding: 80px 30px;text-align: center;margin: auto;}
+.notFound .box h1{font-size: 60px;font-weight: bold;color: var(--dark-color);opacity: 0.7;}
+.notFound .box p{font-size: 18px;color: var(--dark-color);margin-top: 25px;font-weight: 500;}
+
+#HomePageBtn {background-color: var(--background-color);color: var(--primary-color);border: 1px solid var(--background-color);outline: none;border-radius: 4px;align-items: center;display: flex;padding: 5px 10px;font-weight: 500;font-size: 16px;}
+#HomePageBtn  a{color: #fff;text-decoration: none;}
+
+#HomePageBtn:hover{background-color: var(--primary-color);color:var(--background-color); }
+
+#HomePageBtn:hover > a{color: var(--background-color)}

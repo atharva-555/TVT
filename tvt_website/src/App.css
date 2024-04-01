@@ -12,7 +12,9 @@
 .cursor{cursor: pointer;}
 
 .bg-color{background: #201658;}
-
+.text-grey{color: #5f5f5f!important;font-weight: 500;}
+.text-bg{color: var(--background-color)!important;}
+.text-org{color: #bb8300!important;font-size:16px ;font-weight: 500;}
 .icon-color{color:gray;}
 .hd{font-size:34px;font-weight: 700;margin-bottom: 20px;}
 

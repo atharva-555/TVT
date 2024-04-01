@@ -18,7 +18,7 @@
 .fliters  h5{font-weight: 600;margin-bottom: 10px;}
 
 #filter-btn{ background-color: var(--background-color);color: var(--primary-color);border: 1px solid var(--background-color);outline: none;border-radius: 4px;align-items: center;display: flex;padding: 5px 10px;font-weight: 500;font-size: 16px;}
-#filter-btn:hover{background-color: var(--primary-color);color:var(--background-color); ;}
+#filter-btn:hover{background-color: var(--primary-color);color:var(--background-color); }
 
 .primary-color{color: var(--background-color);}
 
