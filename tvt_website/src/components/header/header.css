@@ -3,7 +3,7 @@ header{width: 100%; margin-bottom: 50px; padding: 15px 0;background-color: var(-
 .logo{max-width: 200px;margin:0 0 0 40px ;}
 
 .nav nav ul li button{padding: 10px 12px;}
-.nav nav ul li button a{text-transform: capitalize;text-decoration: none;color:var(--dark-color);font-size: 17px;font-weight: 600;} 
+.nav nav ul li a{text-transform: capitalize;text-decoration: none;color:var(--dark-color);font-size: 17px;font-weight: 600;} 
 .nav nav ul li button span{padding: 0 5px;color:var(--dark-color);}
 .nav nav ul li button:hover a,.nav nav ul li button:hover span {color: var(--background-color);}
 

@@ -10,13 +10,34 @@ import About from './pages/About/index';
 import NotFound from './pages/NotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DetailsPage from './pages/Details';
+import { useState,useEffect } from 'react';
+import axios from 'axios';
 
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Header/>
 
+  // FAKE API TO FETCH DATA
+  const[ProductData,setProductData] =useState([]);
+  useEffect(()=>{
+    getData('http://localhost:3000/productData');
+  },[]);
+
+  const getData=async(url)=>{
+    try {
+        await axios.get(url).then((response)=>{
+          // console.log(response.data);
+          setProductData(response.data)
+        })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  return (
+
+    ProductData.length !==0 &&
+    <BrowserRouter>
+      <Header data = {ProductData} />
       <Routes>
         <Route exact={true} path='/' element={<Home/>}/>
         <Route exact={true} path='/about' element={<About/>}/>

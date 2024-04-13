@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../header/header.css';
 import Logo from '../../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
@@ -16,7 +16,17 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import '../../index.css';
 
 
-const Header = () =>{
+const Header = (props) =>{
+
+    // TO FETCH DATA FROM JSON SERVER
+    const [CatData,setCatData]=useState([]);
+
+    useEffect(()=>{
+        // console.log(props.data);
+        setCatData(props.data);
+    })
+
+    
 
     // DROP DOWN AT MY PROFILE
     const[isOpenDropdown,setIsOpenDropdown] = useState(false);
@@ -54,7 +64,7 @@ const Header = () =>{
                                 {/* <ClickAwayListener onClickAway={()=>setIsOpenDropdown(false)}> */}
                                     <ul className="list list-inline mb-0">
                                         <li className="list-inline-item">
-                                            <Button><span className='icon'><HomeOutlinedIcon/></span><Link>Home</Link></Button>
+                                        <Link to={'/'}><Button><span className='icon'><HomeOutlinedIcon/></span><Link to={'/'} >Home</Link></Button></Link>
                                         </li>
                                         <li className="list-inline-item">
                                             <Button><Link>About Us</Link></Button>
@@ -63,34 +73,33 @@ const Header = () =>{
                                             <Button><span className='icon'><ListIcon/></span><Link>Products</Link></Button>
                                             <div className='dropdown_menu megaMenu'>
                                                <div className='row'>
-                                                    <div className='col'>
-                                                           <h4>Tshirts</h4>
-                                                            <ul>
-                                                                <li><Link to={""}>Sweatshirts</Link></li>
-                                                                <li><Link to={""}>Oversized Tshirts</Link></li>
-                                                                <li><Link to={""}> Cotton Tshirts 230GSM</Link></li>       
-                                                            </ul>
-                                                                                 
-                                                            <h4>Shirts</h4>   
-                                                            <ul>
-                                                                <li><Link to={""}>New Arrival</Link></li>
-                                                                <li><Link to={""}>Formal</Link></li>
-                                                                <li><Link to={""}>Casual</Link></li>       
-                                                        </ul>      
-                                                    </div>
-                                                    <div className='col'>
-                                                        <h4>Hoodies</h4>
-                                                        <ul>
-                                                            <li><Link to={""}>Zipper</Link></li>
-                                                            <li><Link to={""}>Designer</Link></li>
-                                                            <li><Link to={""}>Plain</Link></li>       
-                                                        </ul>
-                                                    </div>
-                                                    <div className='col'>
-                                                        <h4>Trending</h4>
-                                                    </div>
+                                                {
+                                                        props.data.length !== 0 &&
+                                                        props.data.map((item, index) => {
+                                                            return (
+                                                                <div className='col'>
+                                                                    <a href={`/cat/${item.cat_name.toLowerCase()}`}> <h4 className='text-capitalize'>{item.cat_name}</h4></a>
+                                                                    {
+                                                                        item.items.length !== 0 &&
+                                                                        <ul className='mt-4 mb-0'>
+                                                                            {
+                                                                                item.items.map((item_, index) => {
+                                                                                    return (
+                                                                                        <li>
+                                                                                            <Link onClick={props.closeNav} to={`/cat/${item.cat_name.toLowerCase()}/${item_.cat_name.replace(/\s/g, '-').toLowerCase()}`}>{item_.cat_name}</Link>
+                                                                                        </li>
+                                                                                    )
+                                                                                })
+                                                                            }
+                                                                        </ul>
+                                                                    }
+                                                                </div>
+                                                            )
+                                                        })
+                                                    }
+
                                                     {/* <div className='col'>
-                                                        <h4>Trending</h4>
+                                                        <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-menu.png" className='w-100' />
                                                     </div> */}
                                                </div>
                                             </div>
