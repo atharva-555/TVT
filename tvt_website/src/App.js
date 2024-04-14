@@ -1,6 +1,7 @@
 // import './palette.css'
 import './assets/fonts/Quicksand-VariableFont_wght.ttf';
 import './App.css';
+import './responsive.css';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Listing from './pages/Listing/index';
@@ -18,6 +19,7 @@ function App() {
 
   // FAKE API TO FETCH DATA
   const[ProductData,setProductData] =useState([]);
+  
   useEffect(()=>{
     getData('http://localhost:3000/productData');
   },[]);
@@ -39,10 +41,10 @@ function App() {
     <BrowserRouter>
       <Header data = {ProductData} />
       <Routes>
-        <Route exact={true} path='/' element={<Home/>}/>
+        <Route  exact={true} path='/' element={<Home data = {ProductData} /> }/>
         <Route exact={true} path='/about' element={<About/>}/>
-        <Route exact={true} path='/listing' element={<Listing/>}/>
-        <Route exact={true} path='/product/details' element={<DetailsPage/>}/>
+        <Route exact={true} path='/listing' element={<Listing data = {ProductData} />}/>
+        <Route exact={true} path='/product/details' element={<DetailsPage data = {ProductData} />}/>
         <Route exact={true} path='*' element={<NotFound/>}/>
       </Routes>
 

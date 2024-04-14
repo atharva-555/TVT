@@ -2,3 +2,8 @@
 .homeProducts .hd{margin-left: 10px;}
 .homeProducts .productRow{display: flex;flex-wrap: wrap;}
 .homeProducts .productRow .item{width: 20%;padding: 15px;}
+.homeProducts .productRow.loading{opacity: 0.5; filter: blur(5px);}
+
+.filterTab li{margin-left: 20px; position: relative;}
+.filterTab li a{color: #000; text-decoration: none; font-size: 16px; transition: all 0.3s ease-in-out; position: relative; font-weight: 600;}
+.filterTab li:hover a, .filterTab li a.act{color: var(--background-color) !important; transform: translateY(-10px); }

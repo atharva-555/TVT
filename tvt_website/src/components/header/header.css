@@ -32,3 +32,6 @@ header{width: 100%; margin-bottom: 50px; padding: 15px 0;background-color: var(-
 #login-btn a{padding-right: 6px;}
 #login-btn:hover > .icon,#login-btn:hover > a {color: var(--background-color);}
 #login-btn:hover{background-color: var(--primary-color);}
+
+/* RESPONSIVE ELEMENTS */
+header .part1 .navbarToggle{display: none;}

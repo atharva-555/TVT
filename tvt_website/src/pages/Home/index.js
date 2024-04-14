@@ -3,8 +3,103 @@ import './style.css';
 import '../../index.css';
 import Product from "../../components/product";
 import CatSlider from "../../components/catSlider";
+import { useState,useEffect } from 'react';
 
-const Home =()=>{
+const Home =(props)=>{
+
+    const [prodData, setprodData] = useState(props.data)
+    const [catArray, setcatArray] = useState([])
+    const [activeTab, setactiveTab] = useState();
+    const [activeTabIndex, setactiveTabIndex] = useState(0);
+    const [activeTabData, setActiveTabData] = useState([]);
+    const [bestSells, setBestSells] = useState([]);
+    const [isLoadingProducts, setIsLoadingProducts] = useState(false);
+
+    // const productRow=useRef();
+    // const context = useContext(MyContext);
+    const catArr = [];
+
+    // FOR DYNAMIC PRODUCTS DISPLAY
+    useEffect(() => {
+
+        prodData.length !== 0 &&
+            prodData.map((item) => {
+                item.items.length !== 0 &&
+                    item.items.map((item_) => {
+                        catArr.push(item_.cat_name);
+                    })
+            })
+
+        const list2 = catArr.filter((item, index) => catArr.indexOf(item) === index);
+        setcatArray(list2)
+
+        setactiveTab(list2[0])
+
+        window.scrollTo(0,0);
+
+    }, [])
+
+
+
+
+
+    useEffect(() => {
+        var arr = [];
+        setActiveTabData(arr);
+        prodData.length !== 0 &&
+            prodData.map((item, index) => {
+                item.items.map((item_, index_) => {
+                    if (item_.cat_name === activeTab) {
+                        {
+                            item_.products.length !== 0 &&
+                                item_.products.map((product) => {
+                                    arr.push({ ...product, parentCatName: item.cat_name, subCatName: item_.cat_name })
+                                })
+
+                            setActiveTabData(arr)
+                            setTimeout(()=>{
+                                setIsLoadingProducts(false);
+                            },[1000]);
+                        }
+                    }
+                })
+
+            })
+
+    }, [activeTab, activeTabData])
+
+
+
+
+
+    const bestSellsArr = [];
+
+    useEffect(() => {
+        prodData.length !== 0 &&
+            prodData.map((item) => {
+                if (item.cat_name === "Electronics") {
+                    item.items.length !== 0 &&
+                        item.items.map((item_) => {
+                            item_.products.length !== 0 &&
+                                item_.products.map((product, index) => {
+                                    bestSellsArr.push(product);
+                                })
+                        })
+                }
+
+            });
+
+
+        setBestSells(bestSellsArr);
+
+    }, [])
+
+
+
+
+
+
+
     return(
         <home>
             <div className="container">
@@ -18,39 +113,44 @@ const Home =()=>{
 
             <section className="homeProducts">
                 <div className="container-fluid">
-                <h2 className='hd'>Popular Products</h2>
-                    <div className="productRow">
-                        <div className="item">
-                            <Product/>
-                        </div>
-                        <div className="item">
-                            <Product/>
-                        </div>
-                        <div className="item">
-                            <Product/>
-                        </div>
-                        <div className="item">
-                            <Product/>
-                        </div>
-                        <div className="item">
-                            <Product/>
-                        </div>
-{/*  */}
-                        <div className="item">
-                            <Product/>
-                        </div>
-                        <div className="item">
-                            <Product/>
-                        </div>
-                        <div className="item">
-                            <Product/>
-                        </div>
-                        <div className="item">
-                            <Product/>
-                        </div>
-                        <div className="item">
-                            <Product/>
-                        </div>
+                    <div className='d-flex align-items-center homeProductsTitleWrap'>
+                    <h2 className='hd'>Popular Products</h2>
+                        <ul className='list list-inline ml-auto filterTab mb-0 res-full'>
+
+                                    {
+                                            catArray.length !== 0 &&
+                                        catArray.map((cat, index) => {
+                                            return (
+                                                <li className="list list-inline-item">
+                                                    <a className={`cursor text-capitalize 
+                                                        ${activeTabIndex === index ? 'act' : ''}`}
+                                                        onClick={() => {
+                                                            setactiveTab(cat)
+                                                            setactiveTabIndex(index);
+                                                            // productRow.current.scrollLeft=0;
+                                                            // setIsLoadingProducts(true);
+                                                        }}
+                                                    >
+                                                        {cat}
+                                                    </a>
+                                                </li>
+                                            )
+                                        })
+                                    }
+
+                                </ul>
+                            </div>
+                            <div className={`productRow ${isLoadingProducts===true && 'loading'}`}>
+                                {
+                                    activeTabData.length !== 0 &&
+                                    activeTabData.map((item, index) => {
+                                        return (
+                                            <div className='item' key={index}>
+                                                <Product tag={item.type} item={item} />
+                                            </div>
+                                        )
+                                    })
+                                }
                     </div>
                 </div>
             </section>

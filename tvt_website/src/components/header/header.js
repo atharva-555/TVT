@@ -13,6 +13,8 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import '../../index.css';
 
 
@@ -50,8 +52,10 @@ const Header = (props) =>{
                 <div className='row'>
 
                     {/* Logo */}
-                    <div className='col-sm-2 mr-10 part1' >
-                        <img className="logo" alt="" src={Logo}/>
+                    <div className='col-sm-2 mr-10 part1 d-flex align-items-center justify-content-center' >
+                        <div className='navbarToggle align-items-center justify-content-center mr-auto'><MenuRoundedIcon/></div>
+                        <Link to='/'><img className="logo" alt="" src={Logo}/></Link>
+                        <div className='navbarToggle ml-auto  align-items-center justify-content-center'><SearchRoundedIcon/></div>
                     </div>
 
             
