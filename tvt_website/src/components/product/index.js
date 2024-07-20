@@ -18,7 +18,7 @@ const Product = (props) => {
 
   useEffect(() => {
     setProductData(props.item);
-}, [props.item])
+}, [props.item, setProductCat]);
 
   return (
 
@@ -36,11 +36,11 @@ const Product = (props) => {
         <h4 className='title'><Link>{ProductData.productName}</Link></h4>
           <Rating name="half-rating-read" value={parseFloat(ProductData.rating)} precision={0.5} readOnly/>
           <div className='d-flex align-items-center mt-2'>
-            <div className='d-flex align-items-center'>
-              <span className='price'>₹{ProductData.price}</span><span className='Oldprice'>₹{ProductData.oldPrice}</span>
+            <div className='d-flex align-items-center w-100'>
+              <span className='price'>₹{ProductData.price}</span><span className='Oldprice ml-auto'>₹{ProductData.oldPrice}</span>
             </div>
-            <Button id='AddToCart' className='ml-auto'><span className='d-flex align-items-center'><ShoppingCartOutlinedIcon style={{ fontSize: '20px' , marginRight: '3px' }}/>Add</span></Button>
           </div>
+          <Button id='AddToCart' className='w-100 mt-3'><span className='d-flex align-items-center'><ShoppingCartOutlinedIcon style={{ fontSize: '20px' , marginRight: '3px' }}/>Add</span></Button>
         </div>
         
         </>}

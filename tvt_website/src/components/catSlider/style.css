@@ -1,13 +1,14 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
 
-.catSlierSection{width: 100%;height: auto;padding: 30px 20px;}
+.catSliderSection{width: 100%;height: auto;padding: 30px 25px;}
 .cat_Slider_Main{box-shadow: 0px 5px 10px rgba(0, 0, 0, 15%);}
 .slick-slider{padding: 15px;}
 .cat_Slider_Main .slick-slide{padding-right: 30px!important;}
 .cat_Slider_Main .item{ cursor:pointer; height: auto;margin-right: 10px;background-color: #d1d5de;}
 .cat_Slider_Main .item img{max-height:200px;padding: 20px;}
 .cat_Slider_Main .item p {opacity: 0.8;}
+.cat_Slider_Main .item a{text-decoration: none;}
 .cat_Slider_Main .item .info{  position: relative;padding: 10px; color: var(--dark-color); background-color: #d1d5de;display: flex;align-content: center;justify-content: center;align-items: center;flex-direction: column;transition: all 0.3s ease-in-out;}
 .cat_Slider_Main .item:hover .info{box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2),0 3px 6px rgba(0, 0, 0, 0.15);transform: translateY(-6px);}
 

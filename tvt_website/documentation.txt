@@ -1,0 +1,46 @@
+------------
+JSON SERVER
+------------
+We have db.json which consists of json data.This json data comprises of ProdcutData ,Ratings ,Categories etc.
+When deploying to production we have to setup json server.For instaance the db.json is accessed similar to normal files.No APIs are used.
+
+----------------
+HEADER COMPONENT
+----------------
+For responsivenes we check the width of the screen using react hook and according to that the desired html is rendered.
+
+----------------
+FOOTER COMPONENT
+----------------
+For responsivenes we check the width of the screen using react hook and according to that the desired html is rendered.
+
+----------------
+RESPONSIVE
+----------------
+
+INCASE of Error=>
+    useEffect(() => {
+        var arr = [];
+        setActiveTabData(arr);
+        prodData.length !== 0 &&
+            prodData.map((item, index) => {
+                item.items.map((item_, index_) => {
+                    if (item_.cat_name === activeTab) {
+                        {
+                            item_.products.length !== 0 &&
+                                item_.products.map((product) => {
+                                    arr.push({ ...product, parentCatName: item.cat_name, subCatName: item_.cat_name })
+                                })
+
+                            setActiveTabData(arr)
+                            setTimeout(()=>{
+                                setIsLoadingProducts(false);
+                            },[1000]);
+                        }
+                    }
+                })
+
+            })
+
+    }, [activeTab,ActiveTabData])
+

@@ -1,11 +1,43 @@
-@media only screen and (min-width:320px) and (max-width:767px) {
+@media only screen and (min-width:220px) and (max-width:767px) {
     header .part1{max-width: 100%;flex: 0 0 100%;}
     header .part1 .navbarToggle{display: flex!important; width:60px;height: 60px;}
     header .part1 .navbarToggle svg{font-size: 32px;}
-    header .part1 .logo{margin: 0px;max-width: 150px;}
+    header .part1 .logo{margin: 0px;max-width: 140px;}
 }
 
-@media only screen and (min-width:320px) and (max-width:992px) {
-    header .part2{display: none;}
-    .headerSearch{position: fixed!important;top: 0px;left: 0px;z-index: 100;width: 100%;height: 100%;}
+@media only screen and (min-width:220px) and (max-width:992px) {
+    header .part2{position: fixed !important; top: 0px; left: -100%; opacity: 0; z-index: 100; width: 70%; height: 100% !important;justify-content: flex-start!important; background: #fff; align-items: flex-start !important; flex-direction: column !important; padding: 40px 15px !important;border: 0px !important;transition: all 0.3s ease-in-out; }
+    header .part2.open{opacity: 1; left: 0px; z-index: 1000000; }
+    /* filter: drop-shadow(150px 0px 0px rgb(0, 0, 0, 0.6));  */
+    header .part2 nav{width: 100%;}
+    header .part2 .nav{width: 100%;}
+    header .part2 nav ul{display: flex;flex-direction: column;}
+    header .part2 nav ul #myprofile{display: none;} 
+    header .part2 nav ul li a, header .part2 nav ul li span svg {margin-right: 6px;color: rgb(0, 0, 0, 0.8)!important;}
+    header .part2 .nav nav ul li .mob-profilemenu li{width: 100%; list-style: none;}
+    header .part2 .nav nav ul li .mob-profilemenu Button{font-family: 'Quicksand';text-align: left;width:100%;text-transform: capitalize;font-size: 17px;color: rgb(0, 0,0, 0.8);padding: 10px 15px;font-weight: 600;justify-content: flex-start;}
+    header .part2 .nav nav ul li  a{display: flex;align-items: center;padding:10px 12px;}
+    header .part2 .nav nav ul li .mob-profilemenu svg {margin-right: 6px;color: rgb(0, 0, 0, 0.8)!important;}
+    header .part2 .nav nav ul li .mob-profilemenu Button:hover{background: #f1f1f1;color: var(--background-color);}
+    #login-btn{margin-left: 15px;}
+    #login-btn a{padding: 0px;}
+
+    .navbarOverlay{width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; background: rgba(0,0,0,0.5); z-index: 100000;}
+    .navbarOverlay{display: none;}
+    .navbarOverlay.open{display: block;}
+
+
+    footer{padding: 20px 10px!important;}
+    footer p{font-size: 14px!important;}
+    footer .social-title {margin-bottom: 15px!important;}
+    footer .first_row p{margin-left: 5px;}
+    footer .footer-logo{display: flex;justify-content:center ;align-items: center;flex-direction: column;max-width: 40%!important;}
+    footer .desc{max-width: 60%!important;}
+    footer .footer-logo .f_logo{max-width: 130px;}
+    footer .footer-logo p{font-size: 14px!important;text-align: center;}
+    footer .container-fluid .row .first_row .footer-logo-wrapper{margin: 0px!important;}
+    footer .container-fluid .row .first_row .footer-logo-wrapper p{font-size: 14px;}
+    footer .container-fluid .row .mid_column, footer .container-fluid .row .first_row {border-bottom: 2px solid var(--light-color);}
+    footer .social{padding:0px!important;}
+    footer .border-b{border-bottom: 2px solid var(--light-color);}
 }
