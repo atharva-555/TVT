@@ -113,6 +113,11 @@ const  Sidebar = (props) => {
       props.filterByRating(parseFloat(keyword))
   }
 
+//   self edited
+
+//   const filterByPrice = (minValue, maxValue) => {
+//     props.filterPrice(minValue,maxValue);
+//   }
  
 
 //  useEffect(() => {

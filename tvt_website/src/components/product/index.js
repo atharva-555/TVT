@@ -25,7 +25,7 @@ const Product = (props) => {
     <div className='ProductThumb' onClick={setProductCat}>
         { ProductData !== undefined &&
           <> 
-                <Link>
+                <Link to={'/product/details'}>
                   <div className='imgWrapper'><img src={ProductData.catImg+'?im=Resize=(420,420)'} className=' p-4 w-100'/></div>
                 </Link>
               
@@ -33,7 +33,7 @@ const Product = (props) => {
       
       
       <div className='info'>
-        <h4 className='title'><Link>{ProductData.productName}</Link></h4>
+        <h4 className='title'><Link to={'/product/details'}>{ProductData.productName}</Link></h4>
           <Rating name="half-rating-read" value={parseFloat(ProductData.rating)} precision={0.5} readOnly/>
           <div className='d-flex align-items-center mt-2'>
             <div className='d-flex align-items-center w-100'>

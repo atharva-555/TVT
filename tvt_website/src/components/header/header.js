@@ -102,7 +102,6 @@ const Header = (props) =>{
         <header>
             <div className='container-fluid'>
                 <div className='row'>
-
                     {/* Logo */}
                     <div className='col-sm-2 mr-10 part1 d-flex align-items-center justify-content-center' >
                         <div className='navbarToggle align-items-center justify-content-center mr-auto' onClick={openMenu}><MenuRoundedIcon/></div>
